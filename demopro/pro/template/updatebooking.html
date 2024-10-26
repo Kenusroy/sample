@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="../updatebooking/{{updata.id}}" method="post">
+    {% csrf_token %}
+    <label>Name</label>
+    <input type="text" name="name" value="{{updata.name}}"><br>
+    <label>Email</label>
+    <input type="text" name="email" value="{{updata.email}}"><br>
+    <label>Type</label>
+    <input type="text" name="types" value="{{updata.type}}"><br>
+    <label>Phone Number</label>
+    <input type="text" name="phonenumber" value="{{updata.phonenumber}}"><br>
+    <label>Address</label>
+    <input type="text" name="address" value="{{updata.address}}"><br>
+    <label>Picking Date</label>
+    <input type="text" name="pickingdate" value="{{updata.pickingdate}}" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'mm/dd/yyyy';}" required=""><br>
+    <label>City</label>
+    <input type="text" name="city" value="{{updata.city}}"><br>
+    <input type="submit" value="Add">
+</form>
+</body>
+</html>

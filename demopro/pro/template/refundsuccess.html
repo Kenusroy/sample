@@ -1,0 +1,64 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+-->
+<!DOCTYPE html>
+{% load static %}
+<html lang="zxx">
+
+<head>
+	<title>Refund success</title>
+
+	<!-- Meta tags -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<!-- Style -->
+	<link rel="stylesheet" href="{% static 'assets/css/style-starter.css' %}">
+	<link rel="stylesheet" href="{% static 'assets/css/loginstyle.css' %}" type="text/css" media="all" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+
+<body>
+
+<section class="w3l-login">
+
+    <div class="overlay">
+
+			<div class="wrapper">
+				<div class="logo">
+					<a class="brand-logo" href="index.html"></a>
+				</div>
+				<div class="form-section">
+                 <div class="agilesign-form">
+
+					<h3></h3>
+					<h3>Amount Refunded Successfully</h3>
+					<form action=".././admin_c_booking" method="post" class="signin-form">
+                        {% csrf_token %}
+						<button type="submit" class="btn btn-primary theme-button mt-4">view Booking</button>
+
+			</div>
+		</div>
+		<div id='stars'></div>
+		<div id='stars2'></div>
+		<div id='stars3'></div>
+
+		<!-- copyright -->
+		<div class="copy-right">
+			<p>&copy; 2020 SWaste Management. All rights reserved | Design by <a href="http://w3layouts.com/" target="_blank">Kenus roy</a></p>
+		</div>
+		<!-- //copyright -->
+    </section>
+
+
+
+</body>
+
+</html>

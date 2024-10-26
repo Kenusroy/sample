@@ -1,0 +1,335 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+
+-->
+<!doctype html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>View Drivers</title>
+    <!-- google-fonts -->
+    <link href="//fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link href="//fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- //google-fonts -->
+    <!-- Template CSS Style link -->
+    <link rel="stylesheet" href="{% static 'assets/css/style-starter.css' %}">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+     <style>
+
+
+</style>
+</head>
+
+<body style="background-color:#e6ffff">
+
+    <!--header-->
+    <header id="site-header" class="fixed-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg stroke">
+                <h1>
+                    <a class="navbar-brand" href="index">
+                        <h3 style="color:  #00ff00">Waste <i class='bx bx-trash'></i> Management</h3>
+                    </a>
+                </h1>
+                <!-- if logo is image enable this
+    <a class="navbar-brand" href="#index.html">
+        <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
+    </a> -->
+                <button class="navbar-toggler  collapsed bg-gradient" type="button" data-toggle="collapse"
+                    data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
+                    <span class="navbar-toggler-icon fa icon-close fa-times"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav mx-lg-auto">
+                          <li class="nav-item">
+                            <a class="nav-link" href="adminhome">Home </span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="adminviewuser">view user</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="addlocation">Add Location</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="viewlocation">View Location</a>
+                        </li>
+                         <li class="nav-item">
+                            <a class="nav-link" href="viewbooking">View booking</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="viewdrivers">View drivers</a>
+                        </li>
+                         <li class="nav-item">
+                            <a class="nav-link" href="viewservice">View services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="showcomplaints">Complaints</a>
+                        </li>
+                         <li class="nav-item">
+                            <a class="nav-link" href="admin_c_booking">cancelled Booking</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="home">Log Out</a>
+                        </li>
+
+                    </ul>
+                </div>
+                <!-- search button -->
+
+                            </label>
+                        </div>
+                    </nav>
+                </div>
+                <!-- //toggle switch for light and dark theme -->
+            </nav>
+        </div>
+    </header>
+    <!--//header-->
+
+    <!-- inner banner -->
+<!--    -->
+    <!-- //footer -->
+
+    <!-- Js scripts -->
+    <!-- move top -->
+<!--<div class="container">-->
+<div class="bg">
+  <h2>Hover Rows</h2>
+  <p>The .table-hover class enables a hover state (grey background on mouse over) on table rows:</p>
+
+<!--  <table class="table table-hover" border="5" >-->
+<!--    <thead>-->
+<!--      <tr>-->
+<!--        <th style="color:orange">Driver Id</th>-->
+
+<!--        <th style="color:orange">Name</th>-->
+<!--        <th style="color:orange">Phone Number</th>-->
+<!--        <th style="color:orange">Email</th>-->
+<!--        <th style="color:orange">Joining Date</th>-->
+<!--        <th style="color:orange">License Number</th>-->
+<!--        <th style="color:orange">Gender </th>-->
+<!--        <th style="color:orange">Location </th>-->
+<!--        <th style="color:orange">Profile </th>-->
+<!--        <th style="color:orange">CV </th>-->
+<!--        <th style="color:orange">Status </th>-->
+
+<!--      <th style="color:orange">Action </th>-->
+<!--        <th style="color:orange">Delete </th>-->
+
+<!--      </tr>-->
+<!--    </thead>-->
+<!--    <tbody>-->
+<!--    {% for i in a %}-->
+<!--      <tr>-->
+<!--        <td style="color:black">{{i.id}}<b></b></td>-->
+
+<!--        <td style="color:black">{{i.name}}<b></b></td>-->
+<!--        <td style="color:black">{{i.phonenumber}}<b></b></td>-->
+<!--        <td style="color:black">{{i.email}}<b></b></td>-->
+<!--          <td style="color:black">{{i.joiningdate}}<b></b></td>-->
+<!--        <td style="color:black">{{i.licensenumber}}<b></b></td>-->
+<!--        <td style="color:black">{{i.gender}}<b></b></td>-->
+<!--        <td style="color:black">{{i.location}}<b></b></td>-->
+<!--        <td style="color:black"><img src="{{i.profile}}" height="50" width="50"><b></b></td>-->
+<!--        <td style="color:black"><img src="{{i.cv}}" height="50" width="50"><b></b></td>-->
+<!--        <td style="color:black" name="statusupd2">{{i.status}}<b></b></td>-->
+<!--        <td style="color:black">{{i.emp_status}}<b></b></td>-->
+<!--          <td>-->
+<!--                <form method="POST" action="driver_confirm/{{i.id}}">-->
+<!--                    {% csrf_token %}-->
+<!--                    <select name="status">-->
+<!--                        <option value="Pending" {% if i.c_status == "Pending" %}selected{% endif %}>Pending</option>-->
+<!--                        <option value="Accepted" {% if i.c_status == "Accepted" %}selected{% endif %}>Accepted</option>-->
+<!--                        <option value="Rejected" {% if i.c_status == "Rejected" %}selected{% endif %}>Rejected</option>-->
+<!--                    </select>-->
+<!--                    <button type="submit" class="btn btn-success">Update</button>-->
+<!--                </form>-->
+<!--          </td>-->
+
+<!--        <td><button><a href="delet_d/{{i.id}}">delete</a></button></td>-->
+<!--      </tr>-->
+<!--    {% endfor %}-->
+<!--    </tbody>-->
+<!--  </table>-->
+    <table class="table table-hover" border="5">
+    <thead>
+        <tr style="color: orange; text-align: left;">
+            <th>Driver ID</th>
+            <th>Name</th>
+            <th>Phone Number</th>
+            <th>Email</th>
+            <th>Joining Date</th>
+            <th>License Number</th>
+            <th>Gender</th>
+            <th>Location</th>
+            <th>Profile</th>
+            <th>CV</th>
+            <th>Status</th>
+            <th>Action</th>
+            <th>Delete</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        {% for i in a %}
+        <tr style="color: black;">
+            <td>{{ i.id }}</td>
+            <td>{{ i.name }}</td>
+            <td>{{ i.phonenumber }}</td>
+            <td>{{ i.email }}</td>
+            <td>{{ i.joiningdate }}</td>
+            <td>{{ i.licensenumber }}</td>
+            <td>{{ i.gender }}</td>
+            <td>{{ i.location }}</td>
+            <td><img src="{{ i.profile }}" height="50" width="50" alt="Profile Image"></td>
+            <td><img src="{{ i.cv }}" height="50" width="50" alt="CV Image"></td>
+            <td name="statusupd2">{{ i.emp_status }}</td>
+
+            <td>
+                <form method="POST" action="driver_confirm/{{ i.id }}">
+                    {% csrf_token %}
+                    <select name="status">
+                        <option value="Pending" {% if i.c_status == "Pending" %}selected{% endif %}>Pending</option>
+                        <option value="Accepted" {% if i.c_status == "Accepted" %}selected{% endif %}>Accepted</option>
+                        <option value="Rejected" {% if i.c_status == "Rejected" %}selected{% endif %}>Rejected</option>
+                    </select>
+                    <button type="submit" class="btn btn-success">Update</button>
+                </form>
+            </td>
+            <td>
+                <button class="btn btn-danger"><a href="delet_d/{{ i.id }}" style="color: white; text-decoration: none;">Delete</a></button>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+</div>
+
+    <button onclick="topFunction()" id="movetop" title="Go to top">
+        <span class="fas fa-level-up-alt" aria-hidden="true"></span>
+    </button>
+    <script>
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("movetop").style.display = "block";
+            } else {
+                document.getElementById("movetop").style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+    <!-- //move top -->
+
+    <!-- common jquery plugin -->
+    <script src="{% static 'assets/js/jquery-3.3.1.min.js' %}"></script>
+    <!-- //common jquery plugin -->
+
+    <!-- theme switch js (light and dark)-->
+    <script src="{% static 'assets/js/theme-change.js' %}"></script>
+    <!-- //theme switch js (light and dark)-->
+
+    <!-- testimonial script -->
+    <script>
+        $(document).ready(function () {
+
+            $('.client-single').on('click', function (event) {
+                event.preventDefault();
+
+                var active = $(this).hasClass('active');
+
+                var parent = $(this).parents('.testi-wrap');
+
+                if (!active) {
+                    var activeBlock = parent.find('.client-single.active');
+
+                    var currentPos = $(this).attr('data-position');
+
+                    var newPos = activeBlock.attr('data-position');
+
+                    activeBlock.removeClass('active').removeClass(newPos).addClass('inactive').addClass(
+                        currentPos);
+                    activeBlock.attr('data-position', currentPos);
+
+                    $(this).addClass('active').removeClass('inactive').removeClass(currentPos).addClass(
+                        newPos);
+                    $(this).attr('data-position', newPos);
+
+                }
+            });
+
+        }(jQuery));
+    </script>
+    <!-- //testimonial script -->
+
+    <!-- MENU-JS -->
+    <script>
+        $(window).on("scroll", function () {
+            var scroll = $(window).scrollTop();
+
+            if (scroll >= 80) {
+                $("#site-header").addClass("nav-fixed");
+            } else {
+                $("#site-header").removeClass("nav-fixed");
+            }
+        });
+
+        //Main navigation Active Class Add Remove
+        $(".navbar-toggler").on("click", function () {
+            $("header").toggleClass("active");
+        });
+        $(document).on("ready", function () {
+            if ($(window).width() > 991) {
+                $("header").removeClass("active");
+            }
+            $(window).on("resize", function () {
+                if ($(window).width() > 991) {
+                    $("header").removeClass("active");
+                }
+            });
+        });
+    </script>
+    <!-- //MENU-JS -->
+
+    <!-- disable body scroll which navbar is in active -->
+    <script>
+        $(function () {
+            $('.navbar-toggler').click(function () {
+                $('body').toggleClass('noscroll');
+            })
+        });
+    </script>
+    <!-- //disable body scroll which navbar is in active -->
+
+    <!--bootstrap-->
+    <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+    <!-- //bootstrap-->
+    <!-- //Js scripts -->
+</body>
+
+</html>

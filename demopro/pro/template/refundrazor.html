@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Refund payment</title>
+    <link rel="stylesheet" href="{% static 'assets/css/style-starter.css' %}">
+    <style>
+        body {
+            background-image: url("{% static 'assets/images/payment1.jpg' %}");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh; /* Ensures the background covers the whole viewport */
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%; /* Ensures the form is vertically centered */
+        }
+
+        .centre-slide {
+            background-color: rgba(255, 255, 255, 0.8); /* Adds a light overlay for readability */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mx-lg-auto">
+            <li class="nav-item">
+                            <a class="nav-link" href="../../adminhome">Home </span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../../adminviewuser">view user</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../../addservice">Add Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../../addlocation">Add Location</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../../viewlocation">View Location</a>
+                        </li>
+                         <li class="nav-item">
+                            <a class="nav-link" href="../../viewbooking">View booking</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../../viewdrivers">View drivers</a>
+                        </li>
+                         <li class="nav-item">
+                            <a class="nav-link" href="../../viewservice">View services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../../showcomplaints">Complaints</a>
+                        </li>
+                         <li class="nav-item active">
+                            <a class="nav-link" href="../../admin_c_booking">cancelled Booking</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../../home">Log Out</a>
+                        </li>
+        </ul>
+    </div>
+</nav>
+<div class="container">
+    <div class="centre-slide">
+
+    <h1>Payment Mode</h1>
+
+<form action="../../refundsuccess/{{pk}}" method="POST">
+    {% csrf_token %}
+<script
+    src="https://checkout.razorpay.com/v1/checkout.js"
+    data-key="rzp_test_SROSnyInFv81S4"
+    data-amount={{amount}}
+    data-currency="INR"
+    data-order_id="{{payment.id}}"
+    data-buttontext="Pay with Razorpay"
+    data-name="django payment"
+    data-description="this is test payment"
+    data-image="https://example.com/your_logo.jpg"
+    data-prefill.name="Gaurav Kumar"
+    data-prefill.email="django@test.com"
+    data-theme.color="#F37254"
+></script>
+<input type="hidden" custom="Hidden Element" name="hidden">
+
+
+</form>
+</div>
+</div>
+</body>
+</html>

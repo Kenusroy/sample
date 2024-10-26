@@ -1,0 +1,237 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>D_viewbooking</title>
+    <!-- google-fonts -->
+    <link href="//fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link href="//fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- //google-fonts -->
+    <!-- Template CSS Style link -->
+    <link rel="stylesheet" href="{% static 'assets/css/style-starter.css' %}">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    -----button-------->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body style="background-color:  #e6ffff">
+
+    <!--header-->
+    <header id="site-header" class="fixed-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg stroke">
+                <h1>
+                    <a class="navbar-brand" href="index">
+                       <h3 style="color:  #00ff00">Waste <i class='bx bx-trash'></i> Management</h3>
+                    </a>
+                </h1>
+                <!-- if logo is image enable this
+    <a class="navbar-brand" href="#index.html">
+        <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
+    </a> -->
+                <button class="navbar-toggler  collapsed bg-gradient" type="button" data-toggle="collapse"
+                    data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
+                    <span class="navbar-toggler-icon fa icon-close fa-times"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav mx-lg-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="driverhome">Home </span></a>
+                        </li>
+
+
+                         <li class="nav-item active">
+                            <a class="nav-link" href="d_viewbooking">View booking</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="driverprofile">Profile</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="viewfinishedwork">Finished Work</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="home">Log Out</a>
+                        </li>
+
+                    </ul>
+                </div>
+                <!-- search button -->
+
+                            </label>
+                        </div>
+                    </nav>
+                </div>
+                <!-- //toggle switch for light and dark theme -->
+            </nav>
+        </div>
+    </header>
+
+<!--    <form method="POST" action="statusupd2">-->
+<!--        {% csrf_token %}-->
+<!--        <label>Status:</label>-->
+<!--         <select name="statusupd2">-->
+<!--            <option value="{{updata.status}}"><&#45;&#45;Action&ndash;&gt; </option>-->
+<!--            <option value="free" {% if i.status == "free" %}selected{% endif %}>free</option>-->
+<!--            <option value="In Work" {% if i.status == "In Work" %}selected{% endif %}>In Work</option>-->
+<!--             <option value="Off duty" {% if i.status == "Off Duty" %}selected{% endif %}>Off Duty </option>-->
+<!--        </select>-->
+<!--          <button type="submit" name="statusupd2">Submit</button>-->
+<!--    </form>-->
+<div class="container">
+    <h1></h1>
+<!--    <h1>Booking Details</h1>-->
+    <div class="container pt-5 mt-5">
+          <div class="agilesign-form">
+		{% if messages %}
+<div class="container">
+<div class="alert alert-success alert-dismissible messages">
+    {% for message in messages %}
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+     {{message}}
+  </div>
+     {% endfor %}
+</div>
+{% endif %}
+  <table class="table table-bordered table-sm">
+    <thead>
+
+      <tr>
+        <th style="color:black">Booking ID<b></b></th>
+        <th style="color:black">Customer name<b></b></th>
+        <th style="color:black">Type<b></b></th>
+          <th style="color:black">Quantity<b></b></th>
+          <th style="color:black">price<b></b></th>
+        <th style="color:black">Email<b></b></th>
+        <th style="color:black">Phone number<b></b></th>
+           <th style="color:black">Address<b></b></th>
+           <th style="color:black">Picking Date<b></b></th>
+            <th style="color:black">location<b></b></th>
+            <th style="color:black">District<b></b></th>
+            <th style="color:black">State<b></b></th>
+
+          <th style="color:black">Landmark<b></b></th>
+          <th style="color:black">Confirmation<b></b></th>
+          <th style="color:black">work Status<b></b></th>
+<!--          <th style="color:black">Cancel<b></b></th>-->
+<!--             <th style="color:black">Delete<b></b></th>-->
+
+      </tr>
+    </thead>
+    <tbody>
+    {% for i in da %}
+      <tr>
+          <td style="color:black">{{i.id}}</td>
+        <td style="color:black">{{i.name}}</td>
+        <td style="color:black">{{i.type}}</td>
+          <td style="color:black">{{i.quantity}}</td>
+          <td style="color:black">{{i.price}}</td>
+        <td style="color:black">{{i.email}}</td>
+        <td style="color:black">{{i.phonenumber}}</td>
+          <td style="color:black">{{i.address}}</td>
+          <td style="color:black">{{i.pickingdate}}</td>
+          <td style="color:black">{{i.city}}</td>
+          <td style="color:black">{{i.district}}</td>
+          <td style="color:black">{{i.state}}</td>
+
+          <td style="color:black">{{i.landmark}}</td>
+
+           <td>
+
+              <form method="POST" action="wr_confirm/{{i.id}}">
+                {% csrf_token %}
+                <label>Confirmation:</label>
+                 <select name="wr_confirm">
+                        <option value=""><--Action--> </option>
+                        <option value="Accepted" {% if i.w_confirm == "Accepted" %}selected{% endif %}>Accepted</option>
+                         <option value="Rejected" {% if i.w_confirm == "Rejected" %}selected{% endif %}>Rejected </option>
+                </select>
+                      <button type="submit" name="wr_confirm/{{i.id}}">Submit</button>
+            </form>
+            </td>
+
+
+      <td><button type="button" class="btn btn-danger"><a href="finishedwork/{{i.id}}">Finished</a></button></td>
+<!--           <td>-->
+
+<!--              <form method="POST" action="w_statusupd/{{i.id}}">-->
+<!--                {% csrf_token %}-->
+<!--                <label>Status:</label>-->
+<!--                 <select name="cl_status">-->
+<!--                        <option value=""><&#45;&#45;Action&ndash;&gt; </option>-->
+<!--                         <option value="Cancelled" {% if i.cl_status == "Cancelled" %}selected{% endif %}>Cancelled </option>-->
+<!--                        </select>-->
+<!--                      <button type="submit" name="w_statusupd/{{i.id}}">Submit</button>-->
+<!--            </form>-->
+<!--        </td>-->
+
+    </tr>
+
+    {% endfor %}
+    </tbody>
+</table>
+
+</div>
+
+
+    <script>
+         document.getElementById('deleteButton').addEventListener('click', function() {
+    Swal.fire({
+      title: 'Are you sure?',
+      text: "You won't be able to revert this!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, delete it!'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire(
+          'Deleted!',
+          'Your file has been deleted.',
+          'success'
+        )
+      }
+    })
+  });
+
+
+
+
+
+        $(function () {
+            $('.navbar-toggler').click(function () {
+                $('body').toggleClass('noscroll');
+            })
+        });
+    </script>
+    <!-- //disable body scroll which navbar is in active -->
+
+    <!--bootstrap-->
+    <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+    <!-- //bootstrap-->
+    <!-- //Js scripts -->
+</body>
+
+</html>

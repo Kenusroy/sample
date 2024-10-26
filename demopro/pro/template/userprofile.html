@@ -1,0 +1,260 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+<title>Profile</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Badge Signup Form template Responsive, Login form web template,Flat Pricing tables,Flat Drop downs  Sign up Web Templates, Flat Web Templates, Login sign up Responsive web template, SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- Custom Theme files -->
+<link href="{% static 'assets/css/signup style.css' %}" rel="stylesheet" type="text/css" media="all" />
+<!-- //Custom Theme files -->
+<!-- web font -->
+<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'><!--web font-->
+<!-- //web font -->
+<!--	bootstrap-->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="{% static 'assets/css/style-starter.css' %}">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+	<style>
+<!--		body {-->
+<!--		 background: url(static/assets/images/nature.jpg)no-repeat center 0px;-->
+<!--		}-->
+	</style>
+</head>
+<body>
+<header id="site-header" class="fixed-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg stroke">
+
+                        <h3 style="color:  #00ff00">Waste <i class='bx bx-trash'></i> Management</h3>
+
+                <!-- if logo is image enable this
+    <a class="navbar-brand" href="#index.html">
+        <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
+    </a> -->
+                <button class="navbar-toggler  collapsed bg-gradient" type="button" data-toggle="collapse"
+                    data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
+                    <span class="navbar-toggler-icon fa icon-close fa-times"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav mx-lg-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="userhome">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="userabout">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="userservice">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="usercontact">Contact</a>
+                        </li>
+						<li class="nav-item active">
+                            <a class="nav-link" href="userprofile">Profile</a>
+                        </li>
+                         <li class="nav-item">
+                            <a class="nav-link" href="u_booking">Bookings</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="u_c_bookings">Cancelled Bookings</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="logout">Logout</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- search button -->
+                    </nav>
+                </div>
+                <!-- //toggle switch for light and dark theme -->
+            </nav>
+        </div>
+    </header>
+
+	<!-- main -->
+	<div class="w3layouts-main">
+
+		<h1 style="color:white">profile</h1>
+		<div class="agilesign-form">
+		{% if messages %}
+<div class="container">
+<div class="alert alert-success alert-dismissible messages">
+    {% for message in messages %}
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+     {{message}}
+  </div>
+     {% endfor %}
+</div>
+{% endif %}
+			<div class="agileits-top">
+				<form  method="post">
+					{% csrf_token %}
+					<div class="styled-input w3ls-text">
+						<input type="text"  id="name" required="" value="{{data.username}}" />
+						<label>User Name</label>
+						<span></span>
+					</div>
+
+					<div class="styled-input w3ls-text">
+						<input type="text" name="email" id="email" required="" value="{{data.email}}"/>
+						<label>Email ID</label>
+						<span></span>
+					</div>
+					<div class="styled-input w3ls-text">
+						<input type="text" name="address" id=address required="" value="{{data.address}}" />
+						<label>Address</label>
+						<span></span>
+					</div>
+					<div class="styled-input w3ls-text">
+						<input type="text" name="phonenumber" required="" value="{{data.phonenumber}}"/>
+						<label>Phone Number</label>
+						<span></span>
+					</div>
+                    <div class="styled-input w3ls-text">
+						 <button><a href="updpr/{{data.id}}">update Profile</a></button></td>
+
+						<span></span>
+
+                </div>
+					
+				</form>
+			</div>
+
+		</div>
+	</div>
+	<!-- //main -->
+	<!-- copyright -->
+	<div class="copyright">
+		<p>© 2024 Badge Signup Form . All rights reserved | Design by <a href="http://w3layouts.com/" target="_blank">Waste Management</a></p>
+	</div>
+	<!-- //copyright -->
+<script>
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("movetop").style.display = "block";
+            } else {
+                document.getElementById("movetop").style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+    <!-- //move top -->
+
+    <!-- common jquery plugin -->
+    <script src="{% static 'assets/js/jquery-3.3.1.min.js' %}"></script>
+    <!-- //common jquery plugin -->
+
+    <!-- theme switch js (light and dark)-->
+    <script src="{% static 'assets/js/theme-change.js' %}"></script>
+    <!-- //theme switch js (light and dark)-->
+
+    <!-- libhtbox -->
+    <script src="{% static 'assets/js/lightbox-plus-jquery.min.js' %}"></script>
+    <!-- libhtbox -->
+
+    <!-- counter for stats -->
+    <script src="{% static 'assets/js/counter.js' %}"></script>
+    <!-- //counter for stats -->
+
+    <!-- testimonial script -->
+    <script>
+        $(document).ready(function () {
+
+            $('.client-single').on('click', function (event) {
+                event.preventDefault();
+
+                var active = $(this).hasClass('active');
+
+                var parent = $(this).parents('.testi-wrap');
+
+                if (!active) {
+                    var activeBlock = parent.find('.client-single.active');
+
+                    var currentPos = $(this).attr('data-position');
+
+                    var newPos = activeBlock.attr('data-position');
+
+                    activeBlock.removeClass('active').removeClass(newPos).addClass('inactive').addClass(
+                        currentPos);
+                    activeBlock.attr('data-position', currentPos);
+
+                    $(this).addClass('active').removeClass('inactive').removeClass(currentPos).addClass(
+                        newPos);
+                    $(this).attr('data-position', newPos);
+
+                }
+            });
+
+        }(jQuery));
+    </script>
+    <!-- //testimonial script -->
+
+    <!-- MENU-JS -->
+    <script>
+        $(window).on("scroll", function () {
+            var scroll = $(window).scrollTop();
+
+            if (scroll >= 80) {
+                $("#site-header").addClass("nav-fixed");
+            } else {
+                $("#site-header").removeClass("nav-fixed");
+            }
+        });
+
+        //Main navigation Active Class Add Remove
+        $(".navbar-toggler").on("click", function () {
+            $("header").toggleClass("active");
+        });
+        $(document).on("ready", function () {
+            if ($(window).width() > 991) {
+                $("header").removeClass("active");
+            }
+            $(window).on("resize", function () {
+                if ($(window).width() > 991) {
+                    $("header").removeClass("active");
+                }
+            });
+        });
+    </script>
+    <!-- //MENU-JS -->
+
+    <!-- disable body scroll which navbar is in active -->
+    <script>
+        $(function () {
+            $('.navbar-toggler').click(function () {
+                $('body').toggleClass('noscroll');
+            })
+        });
+    </script>
+    <!-- //disable body scroll which navbar is in active -->
+
+    <!--bootstrap-->
+    <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+    <!-- //bootstrap-->
+</body>
+</html>

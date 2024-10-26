@@ -1,0 +1,224 @@
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+   <head>
+      <title>Waste Management </title>
+      <!-- Meta tags -->
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <meta name="keywords" content="Jitney Booking Form Responsive Widget, Audio and Video players, Login Form Web Template, Flat Pricing Tables, Flat Drop-Downs, Sign-Up Web Templates, Flat Web Templates, Login Sign-up Responsive Web Template, Smartphone Compatible Web Template, Free Web Designs for Nokia, Samsung, LG, Sony Ericsson, Motorola Web Design"
+         />
+      <script>
+         addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); }
+      </script>
+      <!-- Meta tags -->
+      <!--stylesheets-->
+      <link href="{% static 'assets/css/bookingstyle.css'%}" rel='stylesheet' type='text/css' media="all">
+      <!--//style sheet end here-->
+      <!-- Calendar -->
+      <link rel="stylesheet" href="{% static 'assets/css/jquery-ui.css' %}" />
+      <!-- //Calendar -->
+      <link href="{% static 'assets/css/wickedpicker.css' %}" rel="stylesheet" type='text/css' media="all" />
+      <!-- Time-script-CSS -->
+      <link href="//fonts.googleapis.com/css?family=Barlow:300,400,500" rel="stylesheet">
+       <link rel="stylesheet" href="{% static 'assets/css/style-starter.css' %}">
+       <style>
+        body{
+  background-image: url(static/assets/images/trash.jpg);
+}
+
+    </style>
+   </head>
+   <body>
+   <header id="site-header" class="fixed-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg stroke">
+                <h1>
+                    <a class="navbar-brand" href="index">
+                        <h3 style="color:  #00ff00">Waste <i class='bx bx-trash'></i> Management</h3>
+                    </a>
+                </h1>
+
+                <button class="navbar-toggler  collapsed bg-gradient" type="button" data-toggle="collapse"
+                    data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
+                    <span class="navbar-toggler-icon fa icon-close fa-times"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav mx-lg-auto">
+                        <li class="nav-item ">
+                            <a class="nav-link" href="../userhome">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../userabout">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../userservice">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../usercontact">Contact</a>
+                        </li>
+
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="../userprofile">profile</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="../u_booking">Bookings</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../u_c_bookings">Cancelled Bookings</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="../home">Logout</a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                            </label>
+                    </div>
+                 </nav>
+                </div>
+
+            </nav>
+        </div>
+    </header>
+      <h1 class="header-w3ls">
+
+      </h1>
+      <div class="main-bothside">
+         <form action="../booking" method="post">
+            {% csrf_token %}
+            <div class="form-group">
+               <div class="form-mid-w3ls">
+                  <p>Name</p>
+                  <input type="text" name="name" placeholder="" required="" value="{{a.username}}">
+               </div>
+               <div class="form-mid-w3ls">
+                  <p>Phone Number</p>
+                  <input type="text" placeholder="" name="phonenumber"  required="" value="{{a.phonenumber}}">
+               </div>
+            </div>
+            <div class="form-group">
+               <div class="form-mid-w3ls">
+                  <p>Email</p>
+                  <input type="email"  placeholder="" name="email" required="" value="{{a.email}}">
+               </div>
+               <div class="form-mid-w3ls">
+                  <p>Address</p>
+                  <input type="text" placeholder="" name="address" required="" value="{{a.address}}">
+               </div>
+            </div>
+            <div class="form-group">
+               <div class="form-mid-w3ls">
+                  <p>Pickup Date</p>
+                  <input id="future-date" name="pickingdate" type="date" placeholder="" required min="2024-10-17">
+                  <div class="clear"></div>
+               </div>
+               <div class="form-mid-w3ls">
+                  <p>Waste Type</p>
+                  <input id="datepicker1" name="type" type="text" placeholder="" required="" value="{{pdata.type}}">
+
+               </div>
+            </div>
+            <div class="form-group">
+               <div class="form-mid-w3ls">
+                  <p>PickUp Point/street/House no:</p>
+                  <textarea name="pickingpoint" placeholder="" required=""></textarea>
+               </div>
+               <div class="form-mid-w3ls">
+                  <p>Price/Kg</p>
+                  <input type="text"  name="totalprices" placeholder="" required="" value="{{pdata.price}}">
+               </div>
+            </div>
+             <div class="form-mid-w3ls">
+                  <p>Quantity/packets</p>
+                   <input type="number" id="quantity" name="quantity" min="1" value="1">
+
+            </div>
+            <div class="form-group">
+               <div class="form-mid-w3ls">
+                  <p>Location</p>
+                  <select class="form-control" name="location" >
+                      <option name="location"  value="">Select</option>
+                      {% for i in loc %}
+                     <option name="location"  value="{{i.location}}">{{i.location}}</option>
+                      {% endfor %}
+                  </select>
+               </div>
+
+                <div class="form-mid-w3ls">
+                  <p>Total Price</p>
+                  <input type="text" id="price" name="price" placeholder="" required="" value="{{pdata.price}}">
+               </div>
+            </div>
+              <div class="form-group">
+               <div class="form-mid-w3ls">
+                  <p>District</p>
+                  <input type="text" name="district" placeholder="" required="" value="{{loc.0.district}}">
+               </div>
+
+                   <div class="form-mid-w3ls">
+                  <p>State</p>
+                       <input type="text" name="state" placeholder="" required="" value="{{loc.0.state}}">
+               </div>
+
+              </div>
+
+            <div class="btnn">
+               <input type="submit" value="Submit">
+            </div>
+         </form>
+      </div>
+      <div class="copy">
+         <p>&copy;Waste management. All Rights Reserved | Design by Kenus Roy</a></p>
+      </div>
+      <!-- js -->
+      <script src='js/jquery-2.2.3.min.js'></script>
+      <!-- //js -->
+      <!-- Calendar -->
+      <script src="js/jquery-ui.js"></script>
+      <script>
+
+           const pricePerItem = {{pdata.price}}; // Set the price per item
+        const quantityInput = document.getElementById('quantity');
+        const priceInput = document.getElementById('price');
+
+        // Function to update the price
+        function updatePrice() {
+            const quantity = parseInt(quantityInput.value) || 1;
+            const totalPrice = quantity * pricePerItem;
+            priceInput.value = Math.round(totalPrice); // Update the price field without decimal places
+        }
+
+
+
+
+        // Add event listener to the quantity input
+        quantityInput.addEventListener('input', updatePrice);
+
+        // Initialize the price when the page loads
+        updatePrice();
+
+        // Set the minimum date to today's date
+        const today = new Date().toISOString().split('T')[0];
+        document.getElementById('future-date').setAttribute('min', today);
+
+
+         $(function () {
+         	$("#datepicker,#datepicker1,#datepicker2,#datepicker3").datepicker();
+         });
+      </script>
+      <!-- //Calendar -->
+      <!-- Time -->
+      <script src="js/wickedpicker.js"></script>
+      <script>
+         $('.timepicker,.timepicker1').wickedpicker({ twentyFour: false });
+      </script>
+      <!-- //Time -->
+   </body>
+</html>

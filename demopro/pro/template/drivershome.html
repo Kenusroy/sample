@@ -1,0 +1,517 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+-->
+<!doctype html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Waste mangement</title>
+    <!-- google-fonts -->
+    <link href="//fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link href="//fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- //google-fonts -->
+    <!-- Template CSS Style link -->
+    <link rel="stylesheet" href="{% static 'assets/css/style-starter.css' %}">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        .right-slide .bg-image1 {
+  background-image: url(static/assets/images/wg4.jpg);
+}
+
+    </style>
+</head>
+
+<body>
+    <!--header-->
+    <header id="site-header" class="fixed-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg stroke">
+                <h3 style="color:  #00ff00">Waste <i class='bx bx-trash'></i> Management</h3>
+                    </a>
+                </h1>
+                <!-- if logo is image enable this
+    <a class="navbar-brand" href="#index.html">
+        <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
+    </a> -->
+                <button class="navbar-toggler  collapsed bg-gradient" type="button" data-toggle="collapse"
+                    data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
+                    <span class="navbar-toggler-icon fa icon-close fa-times"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav mx-lg-auto">
+                         <li class="nav-item active">
+                            <a class="nav-link" href="driverhome">Home </span></a>
+                        </li>
+
+
+                         <li class="nav-item">
+                            <a class="nav-link" href="d_viewbooking">View booking</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="driverprofile">Profile</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="viewfinishedwork">Finished Work</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="home">Log Out</a>
+                        </li>
+
+                    </ul>
+                </div>
+                <!-- search button -->
+
+                            </label>
+                        </div>
+                    </nav>
+                </div>
+                <!-- //toggle switch for light and dark theme -->
+            </nav>
+        </div>
+    </header>
+    <!--//header-->
+
+    <!-- banner section -->
+    <div class="slider-container">
+        <div class="left-slide">
+            <div style="background-color: #242424">
+                <h3 class="mt-5 mb-3">Think Green Keep It Clean</h3>
+                <h4>REDUCE-RECYCLE-REUSE</h4>
+                <p class="mt-4">There is no such thing as 'away.' when we throw anything away,it must go SOMEWHERE</p>
+
+            </div>
+        </div>
+        <div class="right-slide">
+            <div class="bg-image1"></div>
+        </div>
+    </div>
+    <!-- //banner section -->
+
+    <!-- gallery section -->
+    <section class="w3l-gallery py-5" id="gallery">
+        <div class="container py-md-5 py-4">
+            <div class="title-heading-w3 text-center mx-auto mb-sm-5 mb-4" style="max-width:700px">
+                <h3 class="title-style">Waste Management</h3>
+                <p class="lead mt-2">“We do not inherit the Earth from our ancestors, we borrow it from our children.” .</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-sm-6">
+                    <div class=" item">
+                        <a href="{% static 'assets/images/g1.jpg' %}" data-lightbox="example-set" data-title="Project 1"
+                            class="zoom d-block">
+                            <img class="card-img-bottom d-block" src="{% static 'assets/images/wg1.jpg' %}" alt="Card image cap">
+                            <span class="overlay__hover"></span>
+
+                        </a>
+                    </div>
+                    <div class="item mt-4">
+                        <a href="{% static 'assets/images/g2.jpg' %}" data-lightbox="example-set" data-title="Project 2"
+                            class="zoom d-block">
+                            <img class="card-img-bottom d-block" src="{% static 'assets/images/front1.jpg' %}" alt="Card image cap">
+                            <span class="overlay__hover"></span>
+
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-sm-6 mt-sm-0 mt-4">
+                    <div class="item">
+                        <a href="{% static 'assets/images/wg3.jpg' %}" data-lightbox="example-set" data-title="Project 3"
+                            class="zoom d-block">
+                            <img class="card-img-bottom d-block" src="{% static 'assets/images/wg3.jpg' %}" alt="Card image cap">
+                            <span class="overlay__hover"></span>
+
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 mt-lg-0 mt-4">
+                    <div class="row">
+                        <div class="col-lg-12 col-sm-6 item">
+                            <a href="{% static 'assets/images/wg4.jpg' %}" data-lightbox="example-set" data-title="Project 4"
+                                class="zoom d-block">
+                                <img class="card-img-bottom d-block" src="{% static 'assets/images/wg5.jpg' %}" alt="Card image cap">
+                                <span class="overlay__hover"></span>
+
+                            </a>
+                        </div>
+                        <div class="col-lg-12 col-sm-6 item mt-lg-4 mt-sm-0 mt-4">
+                            <a href="{% static 'assets/images/g4.jpg' %}" data-lightbox="example-set" data-title="Project 5"
+                                class="zoom d-block">
+                                <img class="card-img-bottom d-block" src="{% static 'assets/images/wg4.jpg' %}" alt="Card image cap">
+                                <span class="overlay__hover"></span>
+                                <span class="hover-content">
+                                    <span class="title"></span>
+                                    <span class="content">.</span>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- //gallery section -->
+
+    <!-- stats -->
+<!--    <section class="w3-stats pb-5" id="stats">-->
+<!--        <div class="container pb-md-5 pb-4">-->
+<!--            <div class="row text-center pt-lg-4">-->
+<!--                <div class="col-md-3 col-6">-->
+<!--                    <div class="counter">-->
+<!--                        <i class="far fa-smile-beam"></i>-->
+<!--                        <div class="timer count-title count-number mt-3" data-to="16300" data-speed="1500"></div>-->
+<!--                        <p class="count-text">Happy Customers</p>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="col-md-3 col-6">-->
+<!--                    <div class="counter">-->
+<!--                        <i class="fas fa-photo-video"></i>-->
+<!--                        <div class="timer count-title count-number mt-3" data-to="36076" data-speed="1500"></div>-->
+<!--                        <p class="count-text">Reviews</p>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="col-md-3 col-6 mt-md-0 mt-5">-->
+<!--                    <div class="counter">-->
+<!--                        <i class="fas fa-camera-retro"></i>-->
+<!--                        <div class="timer count-title count-number mt-3" data-to="25" data-speed="1500"></div>-->
+<!--                        <p class="count-text">Years of Experience</p>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="col-md-3 col-6 mt-md-0 mt-5">-->
+<!--                    <div class="counter">-->
+<!--                        <i class="fas fa-medal"></i>-->
+<!--                        <div class="timer count-title count-number mt-3" data-to="7630" data-speed="1500"></div>-->
+<!--                        <p class="count-text">Awards Won</p>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </section>-->
+<!--    &lt;!&ndash; //stats &ndash;&gt;-->
+
+<!--    &lt;!&ndash; progress & faq section &ndash;&gt;-->
+<!--<section class="w3l-progress py-5" id="progress">-->
+<!--        <div class="container py-md-5 py-4">-->
+
+<!--            <div class="row pt-2">-->
+<!--                <div class="col-lg-6 w3l-faq">-->
+<!--                    <div class="faq-page">-->
+
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="col-lg-6 mt-lg-0 mt-5 pl-lg-5">-->
+<!--                    <div class="progress-info info1">-->
+<!--                        <h6 class="progress-tittle">Cleaning the Nature <span class="">100%</span></h6>-->
+<!--                        <div class="progress">-->
+<!--                            <div class="progress-bar progress-bar-striped gradient-1" role="progressbar"-->
+<!--                                style="width: 80%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="progress-info info2">-->
+<!--                        <h6 class="progress-tittle">Public service <span class="">100%</span>-->
+<!--                        </h6>-->
+<!--                        <div class="progress">-->
+<!--                            <div class="progress-bar progress-bar-striped gradient-2" role="progressbar"-->
+<!--                                style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="progress-info info3">-->
+<!--                        <h6 class="progress-tittle">Waste Disposal <span class="">100%</span></h6>-->
+<!--                        <div class="progress">-->
+<!--                            <div class="progress-bar progress-bar-striped gradient-3" role="progressbar"-->
+<!--                                style="width: 60%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="progress-info info4 mb-0">-->
+<!--                        <h6 class="progress-tittle">Home Service <span class="">100%</span></h6>-->
+<!--                        <div class="progress">-->
+<!--                            <div class="progress-bar progress-bar-striped gradient-4" role="progressbar"-->
+<!--                                style="width: 85%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </section>-->
+    <!-- //progress & faq section -->
+
+    <!-- testimonial section -->
+
+    <!-- //testimonial section -->
+
+    <!-- call section -->
+    <section class="w3l-call-to-action-6 text-center py-5">
+        <div class="container py-md-4 py-3">
+            <div class="d-md-flex align-items-center justify-content-center">
+                <h3 class="title-big">Looking for <span>Clean Nature?</span></h3>
+                <a href="contact" class="btn btn-style ml-md-3 mt-md-0 mt-4">Contact Us</a>
+            </div>
+        </div>
+    </section>
+    <!-- //call section -->
+
+    <!-- blog section -->
+    <section class="w3l-grids-block-5 py-5">
+        <div class="container py-md-5 py-4">
+            <div class="title-heading-w3 text-center mx-auto mb-sm-5 mb-4" style="max-width:700px">
+                <h3 class="title-style">Latest Reviewa</h3>
+                <p class="lead mt-2">Refuse what you do not need; reduce what you do need; reuse what you consume; recycle what you cannot refuse, reduce, or reuse; and rot (compost) the rest.".</p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-6">
+                    <div class="blog-card-single">
+                        <div class="grids5-info">
+                            <a href="#blog"><img src="{% static 'assets/images/blog1.jpg' %}" alt="" /></a>
+                            <div class="blog-info">
+                                <div class="d-flex align-items-center justify-content-between ">
+                                    <a class="d-flex align-items-center" href="#blog" title="23k followers">
+                                        <img class="img-fluid" src="{% static 'assets/images/testi2.jpg' %}" alt="admin"
+                                            style="max-width:40px"> <span class="small ml-2">Eetey Cruis</span>
+                                    </a>
+                                    <p class="date-text"><i class="far fa-calendar-alt mr-1"></i>April 06, 2021</p>
+                                </div>
+                                <h5 class="color-1"><a href="#blog">Cleaning</a></h5>
+                                <h4><a href="#blog">Best Services Ever </a>
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mt-md-0 mt-5">
+                    <div class="blog-card-single">
+                        <div class="grids5-info">
+                            <div class="blog-info">
+                                <div class="d-flex align-items-center justify-content-between ">
+                                    <a class="d-flex align-items-center" href="#blog" title="23k followers">
+                                        <img class="img-fluid" src="{% static 'assets/images/testi1.jpg' %}" alt="admin"
+                                            style="max-width:40px"> <span class="small ml-2">Molive Joe</span>
+                                    </a>
+                                    <p class="date-text"><i class="far fa-calendar-alt mr-1"></i>April 13, 2021</p>
+                                </div>
+                                <h5 class="color-2"><a href="#blog">Customer Handling</a></h5>
+                                <h4><a href="#blog">Best Customer services and Cleaning</a></h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mt-lg-0 mt-5">
+                    <div class="blog-card-single">
+                        <div class="grids5-info">
+                            <div class="blog-info">
+                                <div class="d-flex align-items-center justify-content-between ">
+                                    <a class="d-flex align-items-center" href="#blog" title="23k followers">
+                                        <img class="img-fluid" src="{% static 'assets/images/testi3.jpg' %}" alt="admin"
+                                            style="max-width:40px"> <span class="small ml-2">Turne Leo
+                                        </span>
+                                    </a>
+                                    <p class="date-text"><i class="far fa-calendar-alt mr-1"></i>April 12, 2021</p>
+                                </div>
+                                <h5 class="color-3"><a href="#blog">Best Services</a></h5>
+                                <h4><a href="#blog">They are very responsive and arrive when they say they will. I recently had a dumpster delivered and I was having a hard time walking. The driver was so nice and helped me.</a></h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- //blog section -->
+
+    <!-- footer -->
+  <footer class="w3l-footer-29-main">
+        <div class="footer-29-w3l py-5">
+            <div class="container pt-md-5 pt-4">
+                <div class="w3l-footer-text-style">
+                    <div class="footer-list-cont d-flex align-items-center justify-content-between mb-5">
+                        <h6 class="foot-sub-title">Contact Us</h6>
+<!--                        <div class="main-social-footer-29">-->
+<!--                            <a href="#facebook" class="facebook"><i class="fab fa-facebook-f"></i></a>-->
+<!--                            <a href="#twitter" class="twitter"><i class="fab fa-twitter"></i></a>-->
+<!--                            <a href="#instagram" class="instagram"><i class="fab fa-instagram"></i></a>-->
+<!--                            <a href="#linkedin" class="linkedin"><i class="fab fa-linkedin-in"></i></a>-->
+<!--                        </div>-->
+                    </div>
+                </div>
+                <div class="row footer-top-29 pt-lg-5 pt-sm-4">
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="address-grid">
+                            <h5>Near Kadavantara Metro Station,Kochi <br> Kerala.</h5>
+                            <h5 class="mt-sm-5 mt-4">Everyday: <span> 6 AM - 6 PM</span></h5>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 mt-sm-0 mt-4">
+                        <div class="address-grid">
+                            <h5>Phone</h5>
+                            <h5 class="phone-number-text mt-2"><a href="tel:+1(21) 112 7368">9526988201</a></h5>
+                        </div>
+                        <div class="address-grid mt-sm-5 mt-4">
+                            <h5>E-mail</h5>
+                            <h5 class="email-cont-text mt-1"> <a href="mailto:photogenic@mail.com"
+                                    class="mail">managementwaste122@gmail.com</a></h5>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-sm-5 footer-list-menu pl-lg-0 mt-lg-0 mt-sm-5 mt-4">
+                        <div class="address-grid">
+                                <li><a href="contact.html">Contact us</a></li>
+                                <li><a href="driverreg"> Driver Registration</a></li>
+                                <li><a href="driverlogin"> Driver Login</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="address-grid col-lg-4 col-md-6 col-sm-7 mt-lg-0 mt-sm-5 mt-4 w3l-footer-16-main">
+                        <h5>Subscribe Here</h5>
+                        <form action="#" class="subscribe d-flex mt-4 pt-lg-2 mb-4" method="post">
+                            <input type="email" name="email" placeholder="Email Address" required="">
+                            <button><span class="fa fa-paper-plane" aria-hidden="true"></span></button>
+                        </form>
+                        <p>Subscribe to our mailing list and get updates to your email inbox.</p>
+                    </div>
+                </div>
+                <!-- copyright -->
+                 <div class="w3l-copyright text-center mt-lg-5 mt-sm-4 pt-md-4 pt-3">
+                    <p class="copy-footer-29">© 2024 Waste management. All rights reserved. Design by <a
+                            href="https://w3layouts.com/" target="_blank">
+                            Kenus Roy</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- //footer -->
+
+    <!-- Js scripts -->
+    <!-- move top -->
+    <button onclick="topFunction()" id="movetop" title="Go to top">
+        <span class="fas fa-level-up-alt" aria-hidden="true"></span>
+    </button>
+    <script>
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("movetop").style.display = "block";
+            } else {
+                document.getElementById("movetop").style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+    <!-- //move top -->
+
+    <!-- common jquery plugin -->
+    <script src="{% static 'assets/js/jquery-3.3.1.min.js' %}"></script>
+    <!-- //common jquery plugin -->
+
+    <!-- theme switch js (light and dark)-->
+    <script src="{% static 'assets/js/theme-change.js' %}"></script>
+    <!-- //theme switch js (light and dark)-->
+
+    <!-- libhtbox -->
+    <script src="{% static 'assets/js/lightbox-plus-jquery.min.js' %}"></script>
+    <!-- libhtbox -->
+
+    <!-- counter for stats -->
+    <script src="{% static 'assets/js/counter.js' %}"></script>
+    <!-- //counter for stats -->
+
+    <!-- testimonial script -->
+    <script>
+        $(document).ready(function () {
+
+            $('.client-single').on('click', function (event) {
+                event.preventDefault();
+
+                var active = $(this).hasClass('active');
+
+                var parent = $(this).parents('.testi-wrap');
+
+                if (!active) {
+                    var activeBlock = parent.find('.client-single.active');
+
+                    var currentPos = $(this).attr('data-position');
+
+                    var newPos = activeBlock.attr('data-position');
+
+                    activeBlock.removeClass('active').removeClass(newPos).addClass('inactive').addClass(
+                        currentPos);
+                    activeBlock.attr('data-position', currentPos);
+
+                    $(this).addClass('active').removeClass('inactive').removeClass(currentPos).addClass(
+                        newPos);
+                    $(this).attr('data-position', newPos);
+
+                }
+            });
+
+        }(jQuery));
+    </script>
+    <!-- //testimonial script -->
+
+    <!-- MENU-JS -->
+    <script>
+        $(window).on("scroll", function () {
+            var scroll = $(window).scrollTop();
+
+            if (scroll >= 80) {
+                $("#site-header").addClass("nav-fixed");
+            } else {
+                $("#site-header").removeClass("nav-fixed");
+            }
+        });
+
+        //Main navigation Active Class Add Remove
+        $(".navbar-toggler").on("click", function () {
+            $("header").toggleClass("active");
+        });
+        $(document).on("ready", function () {
+            if ($(window).width() > 991) {
+                $("header").removeClass("active");
+            }
+            $(window).on("resize", function () {
+                if ($(window).width() > 991) {
+                    $("header").removeClass("active");
+                }
+            });
+        });
+    </script>
+    <!-- //MENU-JS -->
+
+    <!-- disable body scroll which navbar is in active -->
+    <script>
+        $(function () {
+            $('.navbar-toggler').click(function () {
+                $('body').toggleClass('noscroll');
+            })
+        });
+    </script>
+    <!-- //disable body scroll which navbar is in active -->
+
+    <!--bootstrap-->
+    <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+    <!-- //bootstrap-->
+    <!-- //Js scripts -->
+</body>
+
+</html>
